@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibCamp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BootCamp
 {
-    public abstract class User
+    public abstract class User : IUser
     {
         public User(string userName)
         {
@@ -19,10 +20,11 @@ namespace BootCamp
             return "User";
         }
 
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
 
         public string ExternalId { get; set; }
-
         public string Username { get; set; }
 
         public abstract void Foo();
