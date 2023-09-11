@@ -8,8 +8,9 @@ namespace LibCamp
 {
     public interface IUser
     {
-        public abstract Guid Id { get; set; }
-        string Name { get; set; }
+        string SName { get; set; }
+        Guid Id { get; set; }
+        string FullName { get; set; }
         int Age { get; set; }
     }
 }

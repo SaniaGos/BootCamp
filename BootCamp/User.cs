@@ -21,11 +21,29 @@ namespace BootCamp
         }
 
         public Guid Id { get; set; }
-        public string Name { get; set; }
+
+        private string _name;
+        protected string _sName;
+
+        public string FullName
+        {
+            get 
+            {
+                return $"{_name} {_sName}";
+            }
+            set
+            {
+                if (value.Contains("Admin", StringComparison.OrdinalIgnoreCase))
+                {
+                    _name = value.Replace("Admin", string.Empty, StringComparison.OrdinalIgnoreCase);
+                }
+            }
+        }
         public int Age { get; set; }
 
         public string ExternalId { get; set; }
         public string Username { get; set; }
+        public string SName { get; set; }
 
         public abstract void Foo();
 

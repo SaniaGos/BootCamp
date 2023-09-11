@@ -3,7 +3,6 @@ using LibCamp;
 
 public class People
 {
-
     protected int UserId { get; set; }
 }
 
@@ -12,7 +11,7 @@ public class Admin : User
     private int _age;
     public Admin() : base("Vasul")
     {
-
+        
     }
 
     //public new void Foo2()
@@ -26,15 +25,34 @@ public class Admin : User
     }
 }
 
-public class SuperAdmin : User
+public sealed class SuperAdmin : User
 {
+    private readonly string description;
+
     public SuperAdmin(string userName) : base("")
     {
+        _sName = "Super";
     }
 
     public override void Foo()
     {
-        throw new NotImplementedException();
+        
+    }
+}
+
+public abstract class Parent
+{
+    public virtual void MyMethod()
+    {
+        Console.Write("parent");
+    }
+}
+
+public class Child : Parent
+{
+    public override void MyMethod()
+    {
+        Console.Write("child");
     }
 }
 
@@ -42,21 +60,20 @@ class Run
 {
     public static void Main()
     {
-        var user = new SuperAdmin("Sania");
-        user.Id = Guid.NewGuid();
-        user.Name = "Sania";
-        user.Age = 33;
+        Child child = new Child();
+        (child as Parent).MyMethod();
 
-        PrintUser(user);
+        Console.ReadLine();
     }
 
     private static void PrintUser(IUser user)
     {
         var a = user as Admin;
 
-        Console.WriteLine("Admin");
 
+        //Console.WriteLine("Admin");
 
+        
 
         //Console.WriteLine($"User id {user.Id}, name {user.Name}, age {user.Age}");
 
