@@ -81,14 +81,9 @@ namespace Encapsulation
             var d1 = DateTime.Now;
             var d2 = DateTime.Now.AddMonths(-6);
 
-
             var d3 = d1 - d2;
 
-            
-
             Console.WriteLine(user);
-
-
         }
 
         static void Main(string[] args)

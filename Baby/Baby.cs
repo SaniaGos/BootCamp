@@ -7,7 +7,7 @@
         {
             get
             {
-                if (_birthDay > DateTime.Now)
+                if (_birthDay > DateTime.UtcNow)
                 {
                     throw new ArgumentOutOfRangeException(nameof(_birthDay));
                 }
@@ -27,7 +27,7 @@
 
         public void PrintAge()
         {
-            Console.WriteLine($"Baby is {(int)(Age.TotalDays / 365)} year, {(int)((Age.TotalDays % 365) / 30)} month, {(Age.TotalDays % 365 % 30)} day");
+            Console.WriteLine($"Baby is {(int)(Age.TotalDays / 365)} year, {(int)((Age.TotalDays % 365) / 30)} month, {(int)(Age.TotalDays % 365 % 30)} day");
         }
     }
 }
