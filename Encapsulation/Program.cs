@@ -1,4 +1,5 @@
 ﻿using BabyAge;
+using System.Globalization;
 using System.Net.Mail;
 
 namespace Encapsulation
@@ -50,6 +51,28 @@ namespace Encapsulation
         {
             return $"NickName {_nickName}";
         }
+
+    }
+
+    public class BaseItem
+    {
+        public int Barcode { get; set; }
+
+        public BaseItem(int b)
+        {
+            Barcode = b;
+        }
+    }
+
+    public class Laptop : BaseItem
+    {
+        public Laptop(int barcode) : base(barcode) { }
+
+        public override bool Equals(object? otherInstance)
+        {
+            return otherInstance is BaseItem &&
+                    this.Barcode == (otherInstance as BaseItem).Barcode;
+        }
     }
 
     class RunEncapsulation
@@ -91,10 +114,14 @@ namespace Encapsulation
             var baby = new Baby(30,5,2010);
             var baby2 = new Baby("30-5-2010");
 
-            baby.PrintAge();
-            baby2.PrintAge();
+            //baby.PrintAge();
+            //baby2.PrintAge();
 
-            Console.WriteLine();
+            var time = DateTime.Now;
+
+            // "dd.MMM.yy"
+
+            Console.WriteLine(time.ToString("dddd, dd MMMM yyyy hh:mm:ss tt", new CultureInfo("en-us")));
         }
     }
 }
