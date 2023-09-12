@@ -1,9 +1,11 @@
 ﻿using BootCamp;
 using LibCamp;
+using System.ComponentModel.DataAnnotations;
 
 public class People
 {
-    protected int UserId { get; set; }
+    [Range(100, 200)]
+    public int UserId { get; set; }
 }
 
 public class Admin : User
@@ -56,10 +58,21 @@ public class Child : Parent
     }
 }
 
+
 class Run
 {
     public static void Main()
     {
+        try
+        {
+
+        }
+        catch (Exception ex)
+        {
+
+        }        
+
+
         Child child = new Child();
         (child as Parent).MyMethod();
 
