@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib", "Lib\Lib.csproj", "{3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encapsulation", "Encapsulation\Encapsulation.csproj", "{FA163529-633A-4588-80C3-4DF6CE859021}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baby", "Baby\Baby.csproj", "{546B0860-5B45-4C94-AF30-3157F2CC36AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FA163529-633A-4588-80C3-4DF6CE859021}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA163529-633A-4588-80C3-4DF6CE859021}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA163529-633A-4588-80C3-4DF6CE859021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{546B0860-5B45-4C94-AF30-3157F2CC36AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546B0860-5B45-4C94-AF30-3157F2CC36AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546B0860-5B45-4C94-AF30-3157F2CC36AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546B0860-5B45-4C94-AF30-3157F2CC36AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

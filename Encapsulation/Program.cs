@@ -1,4 +1,5 @@
-﻿using System.Net.Mail;
+﻿using BabyAge;
+using System.Net.Mail;
 
 namespace Encapsulation
 {
@@ -53,7 +54,7 @@ namespace Encapsulation
 
     class RunEncapsulation
     {
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             User user = new User("Vasuliok")
             {
@@ -88,6 +89,17 @@ namespace Encapsulation
             Console.WriteLine(user);
 
 
+        }
+
+        static void Main(string[] args)
+        {
+            var baby = new Baby(30,5,2010);
+            var baby2 = new Baby("30-5-2010");
+
+            baby.PrintAge();
+            baby2.PrintAge();
+
+            Console.WriteLine();
         }
     }
 }
