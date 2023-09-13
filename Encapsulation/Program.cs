@@ -1,4 +1,5 @@
 ﻿using BabyAge;
+using Polymorphism;
 using System.Globalization;
 using System.Net.Mail;
 
@@ -40,7 +41,7 @@ namespace Encapsulation
 
         public User()
         {
-            
+
         }
         public User(string nickName)
         {
@@ -109,9 +110,9 @@ namespace Encapsulation
             Console.WriteLine(user);
         }
 
-        static void Main(string[] args)
+        static void Main3(string[] args)
         {
-            var baby = new Baby(30,5,2010);
+            var baby = new Baby(30, 5, 2010);
             var baby2 = new Baby("30-5-2010");
 
             //baby.PrintAge();
@@ -122,6 +123,22 @@ namespace Encapsulation
             // "dd.MMM.yy"
 
             Console.WriteLine(time.ToString("dddd, dd MMMM yyyy hh:mm:ss tt", new CultureInfo("en-us")));
+        }
+
+        static void Main(string[] args)
+        {
+            var wolf = new Wolf();
+            var cat = new Cat();
+            var dog = new Dog();
+
+            PlayVoice(wolf);
+            PlayVoice(cat);
+            PlayVoice(dog);
+        }
+
+        private static void PlayVoice(IAnimal animal)
+        {
+            Console.WriteLine(animal.GetVoice());
         }
     }
 }
