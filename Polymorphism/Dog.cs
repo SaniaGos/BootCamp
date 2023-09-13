@@ -13,5 +13,20 @@ namespace Polymorphism
         {
             return "Howl";
         }
+
+        public void GetVoice(uint count)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetVoice(string addCommand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoPlay()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

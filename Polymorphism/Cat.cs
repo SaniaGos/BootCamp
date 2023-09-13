@@ -13,5 +13,25 @@ namespace Polymorphism
         {
             return "Meov";
         }
+
+        public void GetVoice(uint count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine(GetVoice());
+            }
+        }
+
+        public void GetVoice(string addComand)
+        {
+            Console.WriteLine((string.IsNullOrEmpty(addComand) ? string.Empty : addComand + " ") + GetVoice());
+        }
+
+
+
+        public void GoPlay()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

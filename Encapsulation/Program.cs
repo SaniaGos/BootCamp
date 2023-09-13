@@ -131,13 +131,35 @@ namespace Encapsulation
             var cat = new Cat();
             var dog = new Dog();
 
-            PlayVoice(wolf);
+            //PlayVoice(wolf);
+            //PlayVoice(cat);
+            //PlayVoice(dog);
+
+            cat.GetVoice(string.Empty);
+            
             PlayVoice(cat);
-            PlayVoice(dog);
+
+            List<IAnimal> animals = new List<IAnimal>();
+        }
+
+        private static void PlayVaice(List<object> animals)
+        {
+            foreach (var animal in animals)
+            {
+                if (animal is IAnimal)
+                {
+                    var obj = (IAnimal)animal;
+                    obj.GetVoice();
+                }
+            }
         }
 
         private static void PlayVoice(IAnimal animal)
         {
+            
+            
+            
+            animal.GetVoice();
             Console.WriteLine(animal.GetVoice());
         }
     }
