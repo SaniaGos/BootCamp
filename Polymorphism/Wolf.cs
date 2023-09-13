@@ -8,6 +8,8 @@ namespace Polymorphism
 {
     public class Wolf : IAnimal
     {
+        public string Name { get; set; }
+
         public string GetVoice()
         {
             return "Grrr!";

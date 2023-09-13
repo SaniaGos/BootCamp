@@ -2,6 +2,7 @@
 {
     public interface IAnimal
     {
-        public abstract string GetVoice();
+        string Name { get; set; }
+        string GetVoice();
     }
 }
