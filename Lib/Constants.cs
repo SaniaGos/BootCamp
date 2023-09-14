@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lib
 {
-    public class Constants
+    public static class Constants
     {
         public const string Error = "Error";
         public const string StrSpase = " ";
@@ -28,6 +28,22 @@ namespace Lib
             {
                 InitRand();
             }
+            if (maxValue > minValue)
+            {
+                return rand.Next(minValue, maxValue);
+            }
+            else
+            {
+                return rand.Next(maxValue, minValue);
+            }
+        }
+    }
+
+    public static class ConstantsNonEfective
+    {
+        public static int MyRand(int maxValue, int minValue = 0)
+        {
+            var rand = new Random();
             if (maxValue > minValue)
             {
                 return rand.Next(minValue, maxValue);
