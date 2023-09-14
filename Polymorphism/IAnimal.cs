@@ -4,5 +4,9 @@
     {
         string Name { get; set; }
         string GetVoice();
+
+        string GetColor();
+
+        string GetColor(string animalName);
     }
 }

@@ -13,5 +13,14 @@ namespace Polymorphism
         {
             return "Meov";
         }
+
+        public string GetColor()
+        {
+            return "White";
+        }
+        public string GetColor(string animalName)
+        {
+            return $"Cat {animalName} is { GetColor() }!";
+        }
     }
 }

@@ -9,9 +9,20 @@ namespace Polymorphism
     public class Dog : IAnimal
     {
         public string Name { get; set; }
+
         public string GetVoice()
         {
             return "Howl";
+        }
+
+        public string GetColor()
+        {
+            return "Black";
+        }
+
+        public string GetColor(string animalName)
+        {
+            return $"Dog {animalName} is {GetColor()}!";
         }
     }
 }
