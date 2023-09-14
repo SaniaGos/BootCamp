@@ -6,8 +6,7 @@
         {
             VolleyBall volleyBall = new VolleyBall();
 
-            volleyBall.PassAsync().Wait();
-
+            volleyBall.GameStartAsync().Wait();
         }
     }
 }

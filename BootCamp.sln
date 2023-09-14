@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "Polymorphis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork1", "HomeWork1\HomeWork1.csproj", "{80816208-51D4-42D0-8100-137D87C010EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basketball", "Basketball\Basketball.csproj", "{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyBall", "Basketball\VolleyBall.csproj", "{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
