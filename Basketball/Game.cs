@@ -15,6 +15,6 @@ namespace Basketball
             Name = name;
         }
 
-        public abstract Task PassAsync();
+        public abstract Task GameStartAsync();
     }
 }
