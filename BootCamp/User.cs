@@ -61,6 +61,7 @@ namespace BootCamp
                 {
                     FirstName = arr[0];
                     SecondName = arr[1];
+
                 }
             }
         }
