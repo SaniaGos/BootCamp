@@ -6,23 +6,31 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    public class Dog : IAnimal
+    public class Dog : AnimalBase, IAnimal
     {
-        public string Name { get; set; }
-
-        public string GetVoice()
+        public override string GetVoice()
         {
             return "Howl";
         }
 
-        public string GetColor()
+        public void GetVoice(uint count)
         {
-            return "Black";
+            throw new NotImplementedException();
         }
 
-        public string GetColor(string animalName)
+        public void GetVoice(string addCommand)
         {
-            return $"Dog {animalName} is {GetColor()}!";
+            throw new NotImplementedException();
+        }
+
+        public void GetVoice(uint count, bool isToRepeat = true)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoPlay()
+        {
+            throw new NotImplementedException();
         }
     }
 }

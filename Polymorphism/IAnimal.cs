@@ -1,12 +1,14 @@
 ﻿namespace Polymorphism
 {
-    public interface IAnimal
+    public interface IAnimalBase
     {
         string Name { get; set; }
+    }
+    public interface IAnimal : IAnimalBase
+    {
         string GetVoice();
-
-        string GetColor();
-
-        string GetColor(string animalName);
+        void GetVoice(uint count);
+        void GetVoice(string addCommand);
+        void GoPlay();
     }
 }

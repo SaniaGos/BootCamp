@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Baby\Baby.csproj" />
+    <ProjectReference Include="..\Lib\Lib.csproj" />
     <ProjectReference Include="..\Polymorphism\Polymorphism.csproj" />
   </ItemGroup>
 

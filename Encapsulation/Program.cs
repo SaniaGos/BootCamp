@@ -1,8 +1,13 @@
 ﻿using System.Collections;
 using BabyAge;
+using Lib;
 using Polymorphism;
+using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.Net.Mail;
+using System.Runtime.CompilerServices;
 
 namespace Encapsulation
 {
@@ -80,6 +85,7 @@ namespace Encapsulation
 
     internal class RunEncapsulation
     {
+        public string Name { get; set; }
         static void Main2(string[] args)
         {
             User user = new User("Vasuliok")
@@ -129,20 +135,58 @@ namespace Encapsulation
 
         static void Main(string[] args)
         {
-            var wolf = new Wolf();
-            var cat = new Cat();
-            var dog = new Dog();
+            Cat.Description = "Pretty cat";
 
-            PlayVoice(wolf);
-            PrintColor(wolf, "Юра");
-            PlayVoice(cat);
-            PrintColor(cat, "Петро");
-            PlayVoice(dog);
-            PrintColor(dog, "Шарік");
+            var cat = new BigCat();
+            var cat2 = new Cat();
+            var cat3 = new Cat();
+
+            cat.GetPaw();
+
+            ((Cat)cat).GetPaw();
+
+            var list = new List<long>();
+            Stopwatch watch = new Stopwatch();
+            for (int k = 0; k < 100; k++)
+            {
+                watch.Reset();
+                watch.Start();
+
+                for (int i = 0; i < 1000000; i++)
+                {
+                    var rand = Constants.MyRand(100);
+                }
+                watch.Stop();
+                list.Add(watch.ElapsedTicks);
+            }
+
+            Console.WriteLine("RunTime " + list.Average());
+
+            Console.WriteLine(Constants.MyRand(50,100));
+
+
+        }
+
+        private static void PlayVaice(IEnumerable<object> animals)
+        {
+            foreach (var animal in animals)
+            {
+                if (animal is IAnimal)
+                {
+                    var obj = (IAnimal)animal;
+                    obj.GetVoice();
+                }
+            }
         }
 
         private static void PlayVoice(IAnimal animal)
         {
+            Console.WriteLine(animal.GetVoice());
+        }
+
+        private static void PlayVoice(AnimalBase animal)
+        {
+            animal.GetVoice();
             Console.WriteLine(animal.GetVoice());
         }
 

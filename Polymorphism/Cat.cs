@@ -6,21 +6,58 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    public class Cat : IAnimal
+    public class Cat : AnimalBase, IAnimal
     {
-        public string Name { get; set; }
-        public string GetVoice()
+        public static string Description { get; set; }
+        public const string Description2 = "";
+
+        public override string GetVoice()
         {
             return "Meov";
         }
 
-        public string GetColor()
+        public new virtual void GetPaw()
         {
-            return "White";
+            Console.WriteLine("Myrr");
+            
         }
-        public string GetColor(string animalName)
+
+        public void GetVoice(uint count)
         {
-            return $"Cat {animalName} is { GetColor() }!";
+            GetVoice(count, isToRepeat: true);
+        }
+
+        public void GetVoice(uint count, string name = "Pyshok", string sname = "", bool isToRepeat = true)
+        {
+            if (isToRepeat)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    Console.WriteLine(GetVoice());
+                }
+            }
+            else
+            {
+                Console.WriteLine(GetVoice());
+            }
+        }
+
+        public void GetVoice(string addComand)
+        {
+            Console.WriteLine((string.IsNullOrEmpty(addComand) ? string.Empty : addComand + " ") + GetVoice());
+        }
+
+        public void GoPlay()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class BigCat : Cat
+    {
+        public override void GetPaw()
+        {
+            Console.WriteLine("Ssssss");
         }
     }
 }
