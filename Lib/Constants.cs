@@ -10,5 +10,32 @@ namespace Lib
     {
         public const string Error = "Error";
         public const string StrSpase = " ";
+
+        private static Random rand;
+        static Constants()
+        {
+            InitRand();
+        }
+
+        private static void InitRand()
+        {
+            rand = new Random();
+        }
+
+        public static int MyRand(int maxValue, int minValue = 0)
+        {
+            if (rand == null)
+            {
+                InitRand();
+            }
+            if (maxValue > minValue)
+            {
+                return rand.Next(minValue, maxValue);
+            }
+            else
+            {
+                return rand.Next(maxValue, minValue);
+            }
+        }
     }
 }

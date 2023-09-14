@@ -1,7 +1,9 @@
 ﻿using BabyAge;
 using Lib;
 using Polymorphism;
+using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.Net.Mail;
 using System.Runtime.CompilerServices;
@@ -136,17 +138,30 @@ namespace Encapsulation
             var cat = new BigCat();
             var cat2 = new Cat();
             var cat3 = new Cat();
-            
-
-            //PlayVoice(wolf);
-            //PlayVoice(cat);
-            //PlayVoice(dog);
 
             cat.GetPaw();
-            
+
             ((Cat)cat).GetPaw();
-            
-            //PlayVoice(cat);
+
+            var list = new List<long>();
+            Stopwatch watch = new Stopwatch();
+            for (int k = 0; k < 100; k++)
+            {
+                watch.Reset();
+                watch.Start();
+
+                for (int i = 0; i < 1000000; i++)
+                {
+                    var rand = Constants.MyRand(100);
+                }
+                watch.Stop();
+                list.Add(watch.ElapsedTicks);
+            }
+
+            Console.WriteLine("RunTime " + list.Average());
+
+            Console.WriteLine(Constants.MyRand(50,100));
+
 
         }
 
