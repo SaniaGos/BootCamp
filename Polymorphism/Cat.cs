@@ -6,17 +6,37 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    public class Cat : IAnimal
+    public class Cat : AnimalBase, IAnimal
     {
-        public string Name { get; set; }
-        public string GetVoice()
+        public static string Description { get; set; }
+        public const string Description2 = "";
+
+        public override string GetVoice()
         {
             return "Meov";
         }
 
+        public new virtual void GetPaw()
+        {
+            Console.WriteLine("Myrr");
+            
+        }
+
         public void GetVoice(uint count)
         {
-            for (int i = 0; i < count; i++)
+            GetVoice(count, isToRepeat: true);
+        }
+
+        public void GetVoice(uint count, string name = "Pyshok", string sname = "", bool isToRepeat = true)
+        {
+            if (isToRepeat)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    Console.WriteLine(GetVoice());
+                }
+            }
+            else
             {
                 Console.WriteLine(GetVoice());
             }
@@ -27,11 +47,17 @@ namespace Polymorphism
             Console.WriteLine((string.IsNullOrEmpty(addComand) ? string.Empty : addComand + " ") + GetVoice());
         }
 
-
-
         public void GoPlay()
         {
             throw new NotImplementedException();
+        }
+    }
+
+    public class BigCat : Cat
+    {
+        public override void GetPaw()
+        {
+            Console.WriteLine("Ssssss");
         }
     }
 }

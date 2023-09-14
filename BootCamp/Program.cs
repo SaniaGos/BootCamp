@@ -63,20 +63,15 @@ class Run
 {
     public static void Main()
     {
-        try
-        {
+        var admin = new Admin();
+        admin.FirstName = "Oleksandr";
+        admin.SecondName = "Hutsenko";
 
-        }
-        catch (Exception ex)
-        {
+        
+        Console.WriteLine(admin.GetFullName());
 
-        }        
-
-
-        Child child = new Child();
-        (child as Parent).MyMethod();
-
-        Console.ReadLine();
+        admin.SetFullName(new KeyValuePair<string, string>("Shyrik", "Sidorov"));
+        Console.WriteLine(admin.GetFullName());
     }
 
     private static void PrintUser(IUser user)

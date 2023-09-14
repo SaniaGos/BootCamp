@@ -1,7 +1,10 @@
 ﻿using BabyAge;
+using Lib;
 using Polymorphism;
+using System.Data;
 using System.Globalization;
 using System.Net.Mail;
+using System.Runtime.CompilerServices;
 
 namespace Encapsulation
 {
@@ -78,6 +81,7 @@ namespace Encapsulation
 
     class RunEncapsulation
     {
+        public string Name { get; set; }
         static void Main2(string[] args)
         {
             User user = new User("Vasuliok")
@@ -127,22 +131,26 @@ namespace Encapsulation
 
         static void Main(string[] args)
         {
-            var wolf = new Wolf();
-            var cat = new Cat();
-            var dog = new Dog();
+            Cat.Description = "Pretty cat";
+
+            var cat = new BigCat();
+            var cat2 = new Cat();
+            var cat3 = new Cat();
+            
 
             //PlayVoice(wolf);
             //PlayVoice(cat);
             //PlayVoice(dog);
 
-            cat.GetVoice(string.Empty);
+            cat.GetPaw();
             
-            PlayVoice(cat);
+            ((Cat)cat).GetPaw();
+            
+            //PlayVoice(cat);
 
-            List<IAnimal> animals = new List<IAnimal>();
         }
 
-        private static void PlayVaice(List<object> animals)
+        private static void PlayVaice(IEnumerable<object> animals)
         {
             foreach (var animal in animals)
             {
@@ -156,9 +164,11 @@ namespace Encapsulation
 
         private static void PlayVoice(IAnimal animal)
         {
-            
-            
-            
+            Console.WriteLine(animal.GetVoice());
+        }
+
+        private static void PlayVoice(AnimalBase animal)
+        {
             animal.GetVoice();
             Console.WriteLine(animal.GetVoice());
         }

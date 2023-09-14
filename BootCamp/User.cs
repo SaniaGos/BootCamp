@@ -12,7 +12,7 @@ namespace BootCamp
         public User(string userName)
         {
             ExternalId = string.Empty;
-            Username = userName;
+            FirstName = userName;
         }
 
         public static string GetRole()
@@ -25,25 +25,58 @@ namespace BootCamp
         private string _name;
         protected string _sName;
 
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
         public string FullName
         {
-            get 
+            get
             {
-                return $"{_name} {_sName}";
+                return $"{FirstName} {SecondName}";
             }
             set
             {
-                if (value.Contains("Admin", StringComparison.OrdinalIgnoreCase))
+                if (!string.IsNullOrEmpty(value))
                 {
-                    _name = value.Replace("Admin", string.Empty, StringComparison.OrdinalIgnoreCase);
+                    var arr = value.Split(' ', ',', '-');
+                    if (arr.Length == 2)
+                    {
+                        FirstName = arr[0];
+                        SecondName = arr[1];
+                    }
                 }
             }
         }
+
+        public string GetFullName()
+        {
+            return $"{FirstName} {SecondName}";
+        }
+
+        public void SetFullName(string value)
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                var arr = value.Split(' ', ',', '-');
+                if (arr.Length == 2)
+                {
+                    FirstName = arr[0];
+                    SecondName = arr[1];
+                }
+            }
+        }
+
+        public void SetFullName(KeyValuePair<string, string> value)
+        {
+            if (!string.IsNullOrEmpty(value.Value) && !string.IsNullOrEmpty(value.Key))
+            {
+                FirstName = value.Key;
+                SecondName = value.Value;
+            }
+        }
+
         public int Age { get; set; }
 
         public string ExternalId { get; set; }
-        public string Username { get; set; }
-        public string SName { get; set; }
 
         public abstract void Foo();
 

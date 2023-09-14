@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    public class Dog : IAnimal
+    public class Dog : AnimalBase, IAnimal
     {
-        public string Name { get; set; }
-        public string GetVoice()
+        public override string GetVoice()
         {
             return "Howl";
         }
@@ -20,6 +19,11 @@ namespace Polymorphism
         }
 
         public void GetVoice(string addCommand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetVoice(uint count, bool isToRepeat = true)
         {
             throw new NotImplementedException();
         }
