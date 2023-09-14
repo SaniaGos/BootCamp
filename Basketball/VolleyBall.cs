@@ -13,7 +13,7 @@ namespace Basketball
         public const int MAX_POINT = 25;
         private readonly IBall ball;
 
-        public VolleyBall() : base("Basketball")
+        public VolleyBall() : base("VolleyBall")
         {
             ball = new Ball(MyRand.GetRand(100, 1));
         }
@@ -35,7 +35,6 @@ namespace Basketball
                     break;
                 }
             }
-            
             Console.WriteLine("\nGame over!");
         }
 
