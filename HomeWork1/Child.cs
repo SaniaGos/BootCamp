@@ -13,7 +13,6 @@ namespace HomeWork1
         public override void Speak(string message)
         {
             Console.WriteLine(message);
-            Math
         }
     }
 }

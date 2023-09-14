@@ -189,10 +189,5 @@ namespace Encapsulation
             animal.GetVoice();
             Console.WriteLine(animal.GetVoice());
         }
-
-        private static void PrintColor(IAnimal animal, string animalName)
-        {
-            Console.WriteLine(animal.GetColor(animalName) + "\n");
-        }
     }
 }
