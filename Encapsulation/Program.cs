@@ -1,4 +1,5 @@
-﻿using BabyAge;
+﻿using System.Collections;
+using BabyAge;
 using Lib;
 using Polymorphism;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace Encapsulation
 
         public override string ToString()
         {
-            return $"Blood {Blood}, Create Date {Date.ToString("dd-MM-yyyy")}";
+            return $"Blood {Blood}, Create Date {Date:dd-MM-yyyy}";
         }
     }
 
@@ -46,8 +47,8 @@ namespace Encapsulation
 
         public User()
         {
-
         }
+
         public User(string nickName)
         {
             _nickName = nickName;
@@ -57,7 +58,6 @@ namespace Encapsulation
         {
             return $"NickName {_nickName}";
         }
-
     }
 
     public class BaseItem
@@ -72,16 +72,18 @@ namespace Encapsulation
 
     public class Laptop : BaseItem
     {
-        public Laptop(int barcode) : base(barcode) { }
+        public Laptop(int barcode) : base(barcode)
+        {
+        }
 
         public override bool Equals(object? otherInstance)
         {
             return otherInstance is BaseItem &&
-                    this.Barcode == (otherInstance as BaseItem).Barcode;
+                   this.Barcode == (otherInstance as BaseItem).Barcode;
         }
     }
 
-    class RunEncapsulation
+    internal class RunEncapsulation
     {
         public string Name { get; set; }
         static void Main2(string[] args)
@@ -102,8 +104,8 @@ namespace Encapsulation
                     Password = "12345",
                     Pressures = new Pressure[]
                     {
-                        new Pressure(){ Blood = "130/90", Date = DateTime.Now.AddDays(-7) },
-                        new Pressure(){ Blood = "135/80", Date = DateTime.Now }
+                        new Pressure() { Blood = "130/90", Date = DateTime.Now.AddDays(-7) },
+                        new Pressure() { Blood = "135/80", Date = DateTime.Now }
                     }
                 }
             };
@@ -186,6 +188,11 @@ namespace Encapsulation
         {
             animal.GetVoice();
             Console.WriteLine(animal.GetVoice());
+        }
+
+        private static void PrintColor(IAnimal animal, string animalName)
+        {
+            Console.WriteLine(animal.GetColor(animalName) + "\n");
         }
     }
 }
