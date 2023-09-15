@@ -133,8 +133,59 @@ namespace Encapsulation
             Console.WriteLine(time.ToString("dddd, dd MMMM yyyy hh:mm:ss tt", new CultureInfo("en-us")));
         }
 
+
+
+
+
+
+
+
+
+
+
+
+        public interface IExplosable { }
+        public interface IMovable { }
+        public class Vehicle : IMovable, IExplosable { }
+
         static void Main(string[] args)
         {
+            Vehicle vehicle = new Vehicle();
+            IMovable movable = new Vehicle();
+            IExplosable explosable = new Vehicle();
+
+            explosable = vehicle;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Cat.Description = "Pretty cat";
 
             var cat = new BigCat();

@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork1", "HomeWork1\Home
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyBall", "Basketball\VolleyBall.csproj", "{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyBall2", "VolleyBall2\VolleyBall2.csproj", "{2ECEEC51-F4D9-4049-90C6-9AFB47B69BC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ECEEC51-F4D9-4049-90C6-9AFB47B69BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECEEC51-F4D9-4049-90C6-9AFB47B69BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECEEC51-F4D9-4049-90C6-9AFB47B69BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECEEC51-F4D9-4049-90C6-9AFB47B69BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
