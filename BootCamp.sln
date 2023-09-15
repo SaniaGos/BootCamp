@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork1", "HomeWork1\Home
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyBall", "Basketball\VolleyBall.csproj", "{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyBall_V2", "VolleyBall_V2\VolleyBall_V2.csproj", "{61A1FF8C-DCA2-4BAD-9A7B-3E2C53255910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6440EB-5A71-48F4-A4F0-8EB1953C3F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A1FF8C-DCA2-4BAD-9A7B-3E2C53255910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A1FF8C-DCA2-4BAD-9A7B-3E2C53255910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A1FF8C-DCA2-4BAD-9A7B-3E2C53255910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A1FF8C-DCA2-4BAD-9A7B-3E2C53255910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
