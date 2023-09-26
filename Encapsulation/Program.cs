@@ -133,17 +133,39 @@ namespace Encapsulation
             Console.WriteLine(time.ToString("dddd, dd MMMM yyyy hh:mm:ss tt", new CultureInfo("en-us")));
         }
 
+        struct TestSpeed
+        {
+            public double speed;
+            public string name;
+            public int age;
+        }
+        
+        static void Test(ref TestSpeed speed, string name)
+        {
+            speed.name = name;
+        }
+
+        static void Test(TestSpeed speed, string name)
+        {
+            speed.name = name;
+            //return speed;
+        }
+
+
+
         static void Main(string[] args)
         {
-            Cat.Description = "Pretty cat";
+            //Cat.Description = "Pretty cat";
 
-            var cat = new BigCat();
-            var cat2 = new Cat();
-            var cat3 = new Cat();
+            //var cat = new BigCat();
+            //var cat2 = new Cat();
+            //var cat3 = new Cat();
 
-            cat.GetPaw();
+            //cat.GetPaw();
 
-            ((Cat)cat).GetPaw();
+            //((Cat)cat).GetPaw();
+
+            var st = new TestSpeed();
 
             var list = new List<long>();
             Stopwatch watch = new Stopwatch();
@@ -154,15 +176,15 @@ namespace Encapsulation
 
                 for (int i = 0; i < 1000000; i++)
                 {
-                    var rand = Constants.MyRand(100);
+                    Test(st, "Vasia");
                 }
                 watch.Stop();
                 list.Add(watch.ElapsedTicks);
             }
-
+            
             Console.WriteLine("RunTime " + list.Average());
 
-            Console.WriteLine(Constants.MyRand(50,100));
+            //Console.WriteLine(Constants.MyRand(50,100));
 
 
         }

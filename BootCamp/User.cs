@@ -80,7 +80,7 @@ namespace BootCamp
 
         public abstract void Foo();
 
-        public virtual void Foo2()
+        public virtual void FoovVirtual2()
         {
             Console.WriteLine("I am user!");
         }

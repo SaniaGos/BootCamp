@@ -9,6 +9,7 @@ namespace Lib
     public static class Constants
     {
         public const string Error = "Error";
+        public const string Hello = "hello";
         public const string StrSpase = " ";
 
         private static Random rand;
