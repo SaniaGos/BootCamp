@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Net.Mail;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace Encapsulation
 {
@@ -118,6 +119,28 @@ namespace Encapsulation
             Console.WriteLine(user);
         }
 
+        public static TResult TestSpeed<Tin, TResult>(Func<Tin,TResult> func, Tin data) where TResult : class
+        {
+            TResult result = null;
+            var list = new List<long>();
+            Stopwatch watch = new Stopwatch();
+            for (int k = 0; k < 100; k++)
+            {
+                watch.Reset();
+                watch.Start();
+
+                for (int i = 0; i < 1000000; i++)
+                {
+                    result = func?.Invoke(data);
+                }
+                watch.Stop();
+                list.Add(watch.ElapsedTicks);
+            }
+            Console.WriteLine("RunTime " + list.Average());
+
+            return result;
+        }
+
         static void Main3(string[] args)
         {
             var baby = new Baby(30, 5, 2010);
@@ -164,7 +187,6 @@ namespace Encapsulation
 
             Console.WriteLine(Constants.MyRand(50,100));
 
-
         }
 
         private static void PlayVaice(IEnumerable<object> animals)
@@ -188,6 +210,30 @@ namespace Encapsulation
         {
             animal.GetVoice();
             Console.WriteLine(animal.GetVoice());
+        }
+
+
+
+
+
+
+
+        public static int ParseStr(string str)
+        {
+            var result = 0;
+            foreach (var item in str)
+            {
+                result *= 10;
+                if ((int)item >= 48 && (int)item <= 57)
+                {
+                    result += ((int)item - 48);
+                }
+                else
+                {
+                    throw new InvalidDataException($"Sumbol {item} not numeric");
+                }
+            }
+            return result;
         }
     }
 }

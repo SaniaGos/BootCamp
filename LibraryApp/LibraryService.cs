@@ -1,6 +1,7 @@
 ﻿using LibraryApp.Helper;
 using LibraryApp.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,8 @@ namespace LibraryApp
         }
 
         public void SearchByTitle(string title)
-        {bool success = false;
+        {
+            bool success = false;
             foreach (var book in _lib.Books)
             {
                 if (book.Title == title)
@@ -142,7 +144,7 @@ namespace LibraryApp
             foreach (var user in _lib.Users)
             {
                 Console.WriteLine(user.ToString());
-                
+
             }
 
             Console.WriteLine();

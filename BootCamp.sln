@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDbContext", "MyDbContext\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferanceTypeExample", "ReferanceTypeExample\ReferanceTypeExample.csproj", "{1515F66A-C7CF-4C4A-8C96-CF6C82142E7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryApp", "LibraryApp\LibraryApp.csproj", "{9DDDB146-482B-498E-A9CF-FF25FFE5F228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApp", "LibraryApp\LibraryApp.csproj", "{9DDDB146-482B-498E-A9CF-FF25FFE5F228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlCreater", "HtmlCreater\HtmlCreater.csproj", "{3E2D5C18-AA93-41EE-A259-91A1811225F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{9DDDB146-482B-498E-A9CF-FF25FFE5F228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DDDB146-482B-498E-A9CF-FF25FFE5F228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DDDB146-482B-498E-A9CF-FF25FFE5F228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E2D5C18-AA93-41EE-A259-91A1811225F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2D5C18-AA93-41EE-A259-91A1811225F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2D5C18-AA93-41EE-A259-91A1811225F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2D5C18-AA93-41EE-A259-91A1811225F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
