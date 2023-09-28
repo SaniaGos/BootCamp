@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedTest", "SpeedTest\Spee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{1E38F78C-D8C7-4A75-A6E8-A2B4E8DBC607}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlCreater", "HtmlCreater\HtmlCreater.csproj", "{2117024E-D89D-4BA1-8969-12C55798B787}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{1E38F78C-D8C7-4A75-A6E8-A2B4E8DBC607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E38F78C-D8C7-4A75-A6E8-A2B4E8DBC607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E38F78C-D8C7-4A75-A6E8-A2B4E8DBC607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2117024E-D89D-4BA1-8969-12C55798B787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2117024E-D89D-4BA1-8969-12C55798B787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2117024E-D89D-4BA1-8969-12C55798B787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2117024E-D89D-4BA1-8969-12C55798B787}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
